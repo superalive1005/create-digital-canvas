@@ -2,12 +2,14 @@
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
   description: string;
   imageSrc: string;
   technologies: string[];
+  liveUrl?: string;
   className?: string;
 }
 
@@ -16,6 +18,7 @@ const ProjectCard = ({
   description,
   imageSrc,
   technologies,
+  liveUrl,
   className
 }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -58,6 +61,17 @@ const ProjectCard = ({
         <h3 className="mb-2 text-xl font-bold tracking-tight">{title}</h3>
         
         <p className="text-muted-foreground line-clamp-3">{description}</p>
+        
+        {liveUrl && (
+          <a 
+            href={liveUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+          >
+            View Project <ExternalLink size={16} />
+          </a>
+        )}
         
         <div 
           className={cn(
