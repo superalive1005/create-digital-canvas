@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -10,6 +10,7 @@ interface ProjectCardProps {
   imageSrc: string;
   technologies: string[];
   liveUrl?: string;
+  githubUrl?: string;
   className?: string;
 }
 
@@ -19,6 +20,7 @@ const ProjectCard = ({
   imageSrc,
   technologies,
   liveUrl,
+  githubUrl,
   className
 }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -62,16 +64,29 @@ const ProjectCard = ({
         
         <p className="text-muted-foreground line-clamp-3">{description}</p>
         
-        {liveUrl && (
-          <a 
-            href={liveUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
-          >
-            View Project <ExternalLink size={16} />
-          </a>
-        )}
+        <div className="mt-4 flex items-center gap-4">
+          {liveUrl && (
+            <a 
+              href={liveUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+            >
+              <span>View Project</span> <ExternalLink size={16} />
+            </a>
+          )}
+          
+          {githubUrl && (
+            <a 
+              href={githubUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+            >
+              <span>GitHub</span> <Github size={16} />
+            </a>
+          )}
+        </div>
         
         <div 
           className={cn(

@@ -1,35 +1,51 @@
 
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Experience', href: '/experience' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Skills', href: '/skills' },
+  { name: 'Home', href: '#home' },
+  { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      
+      // Find the active section based on scroll position
+      const sections = navigation.map(item => item.href.substring(1));
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && window.scrollY >= section.offsetTop - 200) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
+  const scrollToSection = (href: string) => {
     setMobileMenuOpen(false);
-  }, [location.pathname]);
+    const element = document.getElementById(href.substring(1));
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <header 
@@ -41,26 +57,34 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <NavLink 
-          to="/" 
+        <a 
+          href="#home" 
           className="text-xl font-bold tracking-tight transition-opacity hover:opacity-80"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('#home');
+          }}
         >
           Adrian<span className="text-primary">.</span>
-        </NavLink>
+        </a>
         
         <nav className="hidden md:block">
           <ul className="flex items-center space-x-1">
             {navigation.map((item) => (
               <li key={item.name}>
-                <NavLink
-                  to={item.href}
-                  className={({ isActive }) => cn(
+                <a
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }}
+                  className={cn(
                     'nav-link',
-                    isActive && 'active'
+                    activeSection === item.href.substring(1) && 'active'
                   )}
                 >
                   {item.name}
-                </NavLink>
+                </a>
               </li>
             ))}
           </ul>
@@ -92,15 +116,21 @@ const Navbar = () => {
               <ul className="flex flex-col space-y-3">
                 {navigation.map((item) => (
                   <li key={item.name}>
-                    <NavLink
-                      to={item.href}
-                      className={({ isActive }) => cn(
+                    <a
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection(item.href);
+                      }}
+                      className={cn(
                         'block py-2 text-base font-medium transition-colors',
-                        isActive ? 'text-primary' : 'text-foreground hover:text-primary'
+                        activeSection === item.href.substring(1) 
+                          ? 'text-primary' 
+                          : 'text-foreground hover:text-primary'
                       )}
                     >
                       {item.name}
-                    </NavLink>
+                    </a>
                   </li>
                 ))}
               </ul>
