@@ -22,8 +22,8 @@ const aboutData = {
     "Experienced team leader with a focus on collaborative development",
   ],
   socialLinks: {
-    github: "https://github.com/adrianliu",
-    linkedin: "https://linkedin.com/in/adrianliu",
+    github: "https://github.com/livebcdev0603",
+    // linkedin: "https://linkedin.com/in/adrianliu",
     email: "adrian.liu@example.com"
   }
 };
@@ -97,7 +97,7 @@ const projectsData = [
     imageSrc: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2940&auto=format&fit=crop',
     technologies: ['Spring Boot', 'Docker', 'Kubernetes', 'HIPAA Compliance'],
     liveUrl: 'https://kphhealthcareservices.com/projects/patient-management',
-    githubUrl: 'https://github.com/adrianliu/patient-management'
+    // githubUrl: 'https://github.com/adrianliu/patient-management'
   },
   {
     title: 'E-Commerce Platform',
@@ -105,7 +105,7 @@ const projectsData = [
     imageSrc: 'https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=2940&auto=format&fit=crop',
     technologies: ['Spring MVC', 'Hibernate', 'React', 'MySQL'],
     liveUrl: 'https://cathayinnovation.com/colizey-platform',
-    githubUrl: 'https://github.com/adrianliu/ecommerce-platform'
+    // githubUrl: 'https://github.com/adrianliu/ecommerce-platform'
   },
   {
     title: 'Healthcare Content Management System',
@@ -113,7 +113,7 @@ const projectsData = [
     imageSrc: 'https://images.unsplash.com/photo-1576089172869-4f5f6f315620?q=80&w=2874&auto=format&fit=crop',
     technologies: ['Java', 'React', 'GraphQL', 'MongoDB'],
     liveUrl: 'https://kphhealthcareservices.com/healthcare-cms',
-    githubUrl: 'https://github.com/adrianliu/healthcare-cms'
+    // githubUrl: 'https://github.com/adrianliu/healthcare-cms'
   },
   {
     title: 'Mobile Healthcare App',
@@ -121,7 +121,7 @@ const projectsData = [
     imageSrc: 'https://images.unsplash.com/photo-1550638462-79f9438659a9?q=80&w=2952&auto=format&fit=crop',
     technologies: ['Flutter', 'Firebase', 'RESTful APIs'],
     liveUrl: 'https://kphhealthcareservices.com/mobile-app',
-    githubUrl: 'https://github.com/adrianliu/healthcare-mobile'
+    // githubUrl: 'https://github.com/adrianliu/healthcare-mobile'
   },
   {
     title: 'Learning Management System',
@@ -129,7 +129,7 @@ const projectsData = [
     imageSrc: 'https://images.unsplash.com/photo-1504884790557-420404ff5e6e?q=80&w=2940&auto=format&fit=crop',
     technologies: ['Java EE', 'Microservices', 'GraphQL', 'MongoDB'],
     liveUrl: 'https://docebo.com/lms-platform',
-    githubUrl: 'https://github.com/adrianliu/learning-ms'
+    // githubUrl: 'https://github.com/adrianliu/learning-ms'
   },
   {
     title: 'Real-time Monitoring Dashboard',
@@ -137,7 +137,7 @@ const projectsData = [
     imageSrc: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
     technologies: ['Datadog', 'Grafana', 'Prometheus', 'Kubernetes'],
     liveUrl: 'https://kphhealthcareservices.com/monitoring-dashboard',
-    githubUrl: 'https://github.com/adrianliu/monitoring-dashboard'
+    // githubUrl: 'https://github.com/adrianliu/monitoring-dashboard'
   }
 ];
 
