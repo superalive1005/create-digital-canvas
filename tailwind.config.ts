@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -138,7 +137,8 @@ export default {
 				'scale-in': 'scale-in 0.7s ease-out forwards',
 				'blur-in': 'blur-in 0.7s ease-out forwards',
 				'float': 'float 3s ease-in-out infinite',
-				'shimmer': 'shimmer 1.5s infinite'
+				'shimmer': 'shimmer 1.5s infinite',
+				'text-gradient': 'text-gradient 3s linear infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

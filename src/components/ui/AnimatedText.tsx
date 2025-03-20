@@ -15,7 +15,7 @@ const AnimatedText = ({
   className,
   once = true,
   delay = 0,
-  tag: Tag = 'div',
+  tag = 'div',
 }: AnimatedTextProps) => {
   const elementRef = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
@@ -54,8 +54,11 @@ const AnimatedText = ({
     };
   }, [delay, once]);
 
+  // Create the component dynamically based on the tag prop
+  const Component = tag as React.ElementType;
+
   return (
-    <Tag
+    <Component
       ref={elementRef}
       className={cn('inline-block', className)}
     >
@@ -70,7 +73,7 @@ const AnimatedText = ({
           {char}
         </span>
       ))}
-    </Tag>
+    </Component>
   );
 };
 
