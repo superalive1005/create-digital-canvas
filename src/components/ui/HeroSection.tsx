@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import AnimatedText from './AnimatedText';
 import { Button } from '@/components/ui/button';
-import { ArrowDownIcon } from 'lucide-react';
+import { ArrowDownIcon, Code, Terminal } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
@@ -51,7 +51,7 @@ const HeroSection = () => {
           x: Math.random() * width,
           y: Math.random() * height,
           radius: Math.random() * 2 + 0.5,
-          color: `rgba(100, 149, 237, ${Math.random() * 0.5 + 0.25})`,
+          color: `rgba(60, 210, 120, ${Math.random() * 0.5 + 0.25})`,
           speedX: Math.random() * 0.5 - 0.25,
           speedY: Math.random() * 0.5 - 0.25
         });
@@ -89,7 +89,7 @@ const HeroSection = () => {
           
           if (distance < maxDistance) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(100, 149, 237, ${0.2 * (1 - distance / maxDistance)})`;
+            ctx.strokeStyle = `rgba(60, 210, 120, ${0.2 * (1 - distance / maxDistance)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -129,18 +129,23 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="mb-8 inline-block overflow-hidden rounded-full border-2 border-primary/20 p-1.5"
+          className="mb-8 inline-block"
         >
-          <div className="overflow-hidden rounded-full bg-primary/10 p-1.5">
-            <div className="h-24 w-24 rounded-full bg-gradient-to-br from-primary/20 to-primary/50" />
+          <div className="hexagon-container">
+            <div className="hexagon bg-gradient-to-br from-primary/30 to-primary/10 backdrop-blur-sm border border-white/10">
+              <div className="hexagon-content flex items-center justify-center">
+                <Terminal size={36} className="text-primary mr-2" />
+                <Code size={36} className="text-accent" />
+              </div>
+            </div>
           </div>
         </motion.div>
         
-        <h1 className="mb-4 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
+        <h1 className="mb-4 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground">
           <AnimatedText text="Adrian Liu" delay={500} className="inline-block" />
         </h1>
         
-        <div className="mb-8 text-xl sm:text-2xl md:text-3xl text-muted-foreground">
+        <div className="mb-8 text-xl sm:text-2xl md:text-3xl text-gradient">
           <AnimatedText text="Full Stack Developer" delay={1000} className="inline-block" />
         </div>
         
@@ -165,13 +170,13 @@ const HeroSection = () => {
           <Button
             asChild
             variant="outline"
-            className="group flex items-center gap-2 rounded-full px-6 py-6 border-primary/20 hover:bg-primary/5"
+            className="group flex items-center gap-2 rounded-full px-6 py-6 border-primary/20 bg-secondary/50 hover:bg-primary/10 hover:border-primary/30"
           >
             <a href="#experience">
-              <span>View My Work</span>
+              <span className="text-foreground">View My Work</span>
               <ArrowDownIcon 
                 size={18} 
-                className="transition-transform duration-300 group-hover:translate-y-1" 
+                className="transition-transform duration-300 group-hover:translate-y-1 text-primary" 
               />
             </a>
           </Button>

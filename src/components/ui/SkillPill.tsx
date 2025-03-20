@@ -18,6 +18,7 @@ const SkillPill = ({ name, className, index = 0 }: SkillPillProps) => {
       viewport={{ once: true, margin: "-50px" }}
       className={cn(
         'skill-pill backdrop-blur-sm card-hover',
+        'bg-secondary/80 border border-white/5 text-foreground/90',
         className
       )}
     >
