@@ -60,7 +60,7 @@ const ProjectCard = ({
           ))}
         </div>
         
-        <h3 className="mb-2 text-xl font-bold tracking-tight">{title}</h3>
+        <h3 className="mb-2 text-xl font-bold text-black">{title}</h3>
         
         <p className="text-muted-foreground line-clamp-3">{description}</p>
         
