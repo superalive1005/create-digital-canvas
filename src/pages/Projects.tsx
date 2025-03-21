@@ -8,47 +8,37 @@ import { motion } from 'framer-motion';
 
 const projectsData = [
   {
-    title: 'HIPAA-Compliant Patient Management System',
-    description: 'A comprehensive healthcare solution that improves patient data security and accessibility across multiple departments. Built with Spring Boot microservices architecture, Docker, and Kubernetes.',
+    title: 'Apache Camel codebase',
+    description: 'Apache Camel application working in a Spring Boot environment. Although it was tested only with Hibernate and H2, it should work with any JPA 2.1 implementation and any database supported by it.',
     imageSrc: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2940&auto=format&fit=crop',
-    technologies: ['Spring Boot', 'Docker', 'Kubernetes', 'HIPAA Compliance'],
-    liveUrl: 'https://kphhealthcareservices.com/projects/patient-management'
+    technologies: ['Spring Boot', 'Hibernate ', 'H2', 'JPA2.1'],
+    github: 'https://github.com/livebcdev0603/realworld-camel-springboot',
+    liveUrl: ''
   },
   {
-    title: 'E-Commerce Platform',
-    description: 'High-traffic e-commerce platform handling over 1 million transactions annually. Features include inventory management, payment processing, and order fulfillment systems.',
+    title: 'Snakgame',
+    description: '',
     imageSrc: 'https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=2940&auto=format&fit=crop',
-    technologies: ['Spring MVC', 'Hibernate', 'React', 'MySQL'],
-    liveUrl: 'https://cathayinnovation.com/colizey-platform'
+    technologies: ['Java'],
+    github: 'https://github.com/livebcdev0603/snakegame',
+    liveUrl: ''
   },
   {
-    title: 'Healthcare Content Management System',
-    description: 'A specialized CMS for healthcare providers to manage and publish content across various channels. Reduced administrative workload by 27% within 5 months of implementation.',
+    title: 'Sudoku Solving',
+    description: 'A java application which user can play sudoku solving game.',
     imageSrc: 'https://images.unsplash.com/photo-1576089172869-4f5f6f315620?q=80&w=2874&auto=format&fit=crop',
-    technologies: ['Java', 'React', 'GraphQL', 'MongoDB'],
-    liveUrl: 'https://kphhealthcareservices.com/healthcare-cms'
+    technologies: ['Java'],
+    github: 'https://github.com/livebcdev0603/sudokusolving',
+    liveUrl: ''
   },
   {
-    title: 'Mobile Healthcare App',
-    description: 'Cross-platform mobile application for patient engagement and appointment management. Reached 5,000+ active users within the first year of launch.',
+    title: 'Spring boot microservices',
+    description: 'A real time microservices supply monitoring project utilizing spring cloud technologies framework.',
     imageSrc: 'https://images.unsplash.com/photo-1550638462-79f9438659a9?q=80&w=2952&auto=format&fit=crop',
-    technologies: ['Flutter', 'Firebase', 'RESTful APIs'],
-    liveUrl: 'https://kphhealthcareservices.com/mobile-app'
+    technologies: ['Docker', 'Zipkin', 'Kafka', 'RabbitMQ', 'MongoDB'],
+    github: 'https://github.com/livebcdev0603/spring-boot-microservices',
+    liveUrl: ''
   },
-  {
-    title: 'Learning Management System',
-    description: 'Contributed to the development of an LMS serving 50,000+ active users. Integrated features for course creation, user management, and progress tracking.',
-    imageSrc: 'https://images.unsplash.com/photo-1504884790557-420404ff5e6e?q=80&w=2940&auto=format&fit=crop',
-    technologies: ['Java EE', 'Microservices', 'GraphQL', 'MongoDB'],
-    liveUrl: 'https://docebo.com/lms-platform'
-  },
-  {
-    title: 'Real-time Monitoring Dashboard',
-    description: 'Implemented comprehensive monitoring for distributed systems using Datadog and Grafana, reducing incident resolution time from 1 hour to 35 minutes.',
-    imageSrc: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
-    technologies: ['Datadog', 'Grafana', 'Prometheus', 'Kubernetes'],
-    liveUrl: 'https://kphhealthcareservices.com/monitoring-dashboard'
-  }
 ];
 
 const Projects = () => {
