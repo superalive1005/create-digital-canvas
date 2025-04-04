@@ -22,7 +22,7 @@ const aboutData = {
     "Experienced team leader with a focus on collaborative development",
   ],
   socialLinks: {
-    github: "https://github.com/livebcdev0603",
+    github: "https://github.com/superalive1005",
     // linkedin: "https://linkedin.com/in/adrianliu",
     email: "adrian.liu@example.com"
   }
@@ -96,7 +96,7 @@ const projectsData = [
     description: 'Apache Camel application working in a Spring Boot environment. Although it was tested only with Hibernate and H2, it should work with any JPA 2.1 implementation and any database supported by it.',
     imageSrc: '/img/1.jpg',
     technologies: ['Spring Boot', 'Hibernate ', 'H2', 'JPA2.1'],
-    githubUrl: 'https://github.com/livebcdev0603/realworld-camel-springboot',
+    githubUrl: 'https://github.com/superalive1005/realworld-camel-springboot',
     liveUrl: ''
   },
   {
@@ -104,7 +104,7 @@ const projectsData = [
     description: '',
     imageSrc: '/img/2.jpg',
     technologies: ['Java'],
-    githubUrl: 'https://github.com/livebcdev0603/snakegame',
+    githubUrl: 'https://github.com/superalive1005/snakegame',
     liveUrl: ''
   },
   {
@@ -112,7 +112,7 @@ const projectsData = [
     description: 'A java application which user can play sudoku solving game.',
     imageSrc: '/img/3.jpg',
     technologies: ['Java'],
-    githubUrl: 'https://github.com/livebcdev0603/sudokusolving',
+    githubUrl: 'https://github.com/superalive1005/sudokusolving',
     liveUrl: ''
   },
   {
@@ -120,7 +120,7 @@ const projectsData = [
     description: 'A real time microservices supply monitoring project utilizing spring cloud technologies framework.',
     imageSrc: '/img/4.jpg',
     technologies: ['Docker', 'Zipkin', 'Kafka', 'RabbitMQ', 'MongoDB'],
-    githubUrl: 'https://github.com/livebcdev0603/spring-boot-microservices',
+    githubUrl: 'https://github.com/superalive1005/spring-boot-microservices',
     liveUrl: ''
   }
 ];

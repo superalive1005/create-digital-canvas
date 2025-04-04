@@ -12,7 +12,7 @@ const projectsData = [
     description: 'Apache Camel application working in a Spring Boot environment. Although it was tested only with Hibernate and H2, it should work with any JPA 2.1 implementation and any database supported by it.',
     imageSrc: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2940&auto=format&fit=crop',
     technologies: ['Spring Boot', 'Hibernate ', 'H2', 'JPA2.1'],
-    github: 'https://github.com/livebcdev0603/realworld-camel-springboot',
+    github: 'https://github.com/superalive1005/realworld-camel-springboot',
     liveUrl: ''
   },
   {
@@ -20,7 +20,7 @@ const projectsData = [
     description: '',
     imageSrc: 'https://images.unsplash.com/photo-1661956602944-249bcd04b63f?q=80&w=2940&auto=format&fit=crop',
     technologies: ['Java'],
-    github: 'https://github.com/livebcdev0603/snakegame',
+    github: 'https://github.com/superalive1005/snakegame',
     liveUrl: ''
   },
   {
@@ -28,7 +28,7 @@ const projectsData = [
     description: 'A java application which user can play sudoku solving game.',
     imageSrc: 'https://images.unsplash.com/photo-1576089172869-4f5f6f315620?q=80&w=2874&auto=format&fit=crop',
     technologies: ['Java'],
-    github: 'https://github.com/livebcdev0603/sudokusolving',
+    github: 'https://github.com/superalive1005/sudokusolving',
     liveUrl: ''
   },
   {
@@ -36,7 +36,7 @@ const projectsData = [
     description: 'A real time microservices supply monitoring project utilizing spring cloud technologies framework.',
     imageSrc: 'https://images.unsplash.com/photo-1550638462-79f9438659a9?q=80&w=2952&auto=format&fit=crop',
     technologies: ['Docker', 'Zipkin', 'Kafka', 'RabbitMQ', 'MongoDB'],
-    github: 'https://github.com/livebcdev0603/spring-boot-microservices',
+    github: 'https://github.com/superalive1005/spring-boot-microservices',
     liveUrl: ''
   },
 ];
